@@ -175,7 +175,7 @@ bool Expression::checkValid()
         }
     }while(p_counter);
 
-    std::regex expressionRegex("\\(*(0|([1-9][0-9]*))(\\.[0-9]*)?\\)*([\\-\\+\\*\\/\\^]\\(*(0|([1-9][0-9]*))(\\.[0-9]*)?\\)*)*");
+    std::regex expressionRegex("\\(*((0|([1-9][0-9]*))(\\.[0-9]*)?)\\)*([\\-\\+\\*\\/\\^]\\(*((0|([1-9][0-9]*))(\\.[0-9]*)?)\\)*)*");
     std::smatch m;
     std::regex_search(expression, m, expressionRegex);
 
