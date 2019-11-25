@@ -22,7 +22,7 @@ private:
     std::string expression;
 
     std::string numberRegex = "(0|([1-9][0-9]*))(\\.[0-9]*)?";
-    std::string operatorsRegex = "[\\+\\-\\/\\*\\^]";
+    std::string operatorsRegex = "[\\+|[-]|\\^|\\*|\\/]";
 
     void reformat();
     double calculate(std::string);
